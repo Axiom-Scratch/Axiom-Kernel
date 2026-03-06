@@ -1,55 +1,50 @@
-# Prerequisites
-*.d
+# Build directories
+build/
+out/
+bin/
 
 # Object files
 *.o
-*.ko
 *.obj
+
+# Kernel binaries
+*.bin
 *.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# ISO images
+*.iso
 
-# Precompiled Headers
-*.gch
-*.pch
+# Temporary files
+*.log
+*.tmp
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# CMake (if you ever add it)
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Make
+Makefile
+makefile
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Editor junk
+*.swp
+*.swo
+*~
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# VSCode
+.vscode/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# CLion / JetBrains
+.idea/
 
-# debug information files
-*.dwo
+# OS files
+.DS_Store
+Thumbs.db
+
+# QEMU dump files
+*.dmp
+*.qcow2
+
+# ISO build directory
+iso/
