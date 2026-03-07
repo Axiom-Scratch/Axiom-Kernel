@@ -13,6 +13,7 @@ stack_top:
 section .text
 extern kernel_main
 global _start
+global idt_load
 
 _start:
     mov esp, stack_top
@@ -23,3 +24,12 @@ _start:
 hang:
     hlt
     jmp hang
+
+; -------------------------
+; Load Interrupt Descriptor Table
+; -------------------------
+
+idt_load:
+    mov eax, [esp+4]    ; get pointer to IDT structure
+    lidt [eax]          ; load IDT into CPU
+    ret
