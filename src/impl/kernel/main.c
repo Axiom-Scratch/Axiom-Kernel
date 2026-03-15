@@ -1,11 +1,13 @@
 #include "idt.h"
 #include "pic.h"
+#include "pit.h"
 #include "print.h"
 
 void kernel_main() {
   print_clear();
   idt_init();
   pic_remap();
+  pit_init(100);
 
   __asm__ volatile("sti");
 
@@ -17,5 +19,6 @@ void kernel_main() {
   print_str("AND ALSO HOW DEVVING GOING ON? :)\n");
   print_str("HAHAHAH\n");
 
-  __asm__ volatile("int $0");
+  while (1)
+    __asm__ volatile("hlt");
 }
