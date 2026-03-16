@@ -1,4 +1,5 @@
 #include "print.h"
+#include "terminal.h"
 #include <stdint.h>
 
 /* =========================
@@ -43,7 +44,7 @@ void isr33_handler() {
   char c = keyboard_map[scancode];
 
   if (c)
-    print_char(c);
+    terminal_putchar(c);
 
   /* Send End Of Interrupt to PIC */
   outb(0x20, 0x20);
