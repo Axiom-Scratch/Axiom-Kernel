@@ -11,13 +11,15 @@ void kernel_main() {
 
   __asm__ volatile("sti");
 
+  // print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);
+  // print_str("HI Layton\n");
+  // print_set_color(PRINT_COLOR_BLUE, PRINT_COLOR_BLACK);
+  // print_str("HOW IS ARCH LINUX GOING ON!\n");
+  // print_set_color(PRINT_COLOR_GREEN, PRINT_COLOR_BLACK);
+  // print_str("AND ALSO HOW DEVVING GOING ON? :)\n");
+  // print_str("HAHAHAH\n");
+
   print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);
-  print_str("HI Layton\n");
-  print_set_color(PRINT_COLOR_BLUE, PRINT_COLOR_BLACK);
-  print_str("HOW IS ARCH LINUX GOING ON!\n");
-  print_set_color(PRINT_COLOR_GREEN, PRINT_COLOR_BLACK);
-  print_str("AND ALSO HOW DEVVING GOING ON? :)\n");
-  print_str("HAHAHAH\n");
 
   while (1)
     __asm__ volatile("hlt");
